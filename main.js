@@ -47,27 +47,3 @@ function signInWithFacebook() {
             alert("Error: " + error.message);
         });
 }
-// Function to handle phone authentication without reCAPTCHA
-function signInWithPhone() {
-    var phoneNumber = document.getElementById("phone").value;
-
-    // Make sure the phone number is in the correct format
-    var phoneRegex = /^\+[1-9]\d{1,14}$/;
-    if (!phoneRegex.test(phoneNumber)) {
-        alert("Please enter a valid phone number in international format (+123456789).");
-        return;
-    }
-
-    // Initiate phone authentication
-    firebase.auth().signInWithPhoneNumber(phoneNumber)
-        .then(function (confirmationResult) {
-            var verificationCode = prompt('Please enter the verification code sent to your phone:', '');
-            return confirmationResult.confirm(verificationCode);
-        })
-        .then(function (result) {
-            alert("Phone sign-in successful!");
-        })
-        .catch(function (error) {
-            alert("Error: " + error.message);
-        });
-}
