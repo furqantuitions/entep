@@ -30,7 +30,7 @@ function signInWithGoogle() {
     firebase.auth().signInWithPopup(googleProvider)
         .then(function(result) {
             // Redirect to a specific URL after successful login
-            window.location.href = "https://example.com/dashboard"; // Replace with your desired URL
+            window.location.href = "https://google.com"; // Replace with your desired URL
         })
         .catch(function(error) {
             alert("Error: " + error.message);
