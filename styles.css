@@ -7,7 +7,11 @@ body {
     height: 100vh;
     margin: 0;
 }
-
+element-selector {
+  background-image: url('loginback.jpg');
+  background-size: cover; /* Adjust as needed */
+  /* Additional background properties can be added here */
+}
 .wrapper {
     width: 400px;
     background-color: #fff;
