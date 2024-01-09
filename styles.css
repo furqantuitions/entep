@@ -1,17 +1,17 @@
 body {
-    font-family: 'Roboto', sans-if;
+    font-family: 'Roboto', sans-serif;
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-image: url('loginback.jpg');
+    background-size: cover; /* Adjust as needed */
+    /* Additional background properties can be added here */
 }
-element-selector {
-  background-image: url('loginback.jpg');
-  background-size: cover; /* Adjust as needed */
-  /* Additional background properties can be added here */
-}
+
+/* ... (rest of your CSS code) */
 .wrapper {
     width: 400px;
     background-color: #fff;
