@@ -45,13 +45,11 @@ function toggleForm() {
         document.getElementById('wrapper').appendChild(registerForm);
     }
 }
-// Import the necessary Firebase authentication provider
 var googleProvider = new firebase.auth.GoogleAuthProvider();
 function signInWithGoogle() {
     firebase.auth().signInWithPopup(googleProvider)
         .then(function(result) {
-            // Redirect to a specific URL after successful login
-            window.location.href = "https://google.com"; // Replace with your desired URL
+            window.location.href = "https://google.com"; 
         })
         .catch(function(error) {
             alert("Error: " + error.message);
